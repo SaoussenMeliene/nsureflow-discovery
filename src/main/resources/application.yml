@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8761}  # ✅ Railway
+  port: ${PORT:8761}  # ✅ Render utilise PORT automatiquement
 
 spring:
   application:
@@ -7,7 +7,8 @@ spring:
 
 eureka:
   instance:
-    hostname: ${RAILWAY_PUBLIC_DOMAIN:localhost}  # ✅ Railway
+    hostname: ${RENDER_EXTERNAL_HOSTNAME:localhost}  # ✅ Render
+    prefer-ip-address: false
   client:
     register-with-eureka: false
     fetch-registry: false
